@@ -1,0 +1,132 @@
+/* ---------- Custom font ----------
+   Put the font files in a folder named "fonts" next to this css file:
+   fonts/TAN-GARLAND.woff2 | fonts/TAN-GARLAND.ttf | fonts/TAN-GARLAND.otf */
+@font-face{
+  font-family:"Tan Garland";
+  src:url("fonts/TAN-GARLAND.woff2") format("woff2"),
+      url("fonts/TAN-GARLAND.otf") format("opentype"),
+      url("fonts/TAN-GARLAND.ttf") format("truetype");
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
+
+/* ---------- Tokens ---------- */
+:root{
+  --cream:#FFF9EB;
+  --ink:#33382b;          /* dark olive text */
+  --forest:#2f5d34;       /* buttons */
+  --forest-deep:#1d3a17;
+  --sage-card:#e8ebc5;    /* myth vs fact card */
+  --chip-bg:#eef2dc;
+  --chip-line:#c9dc9a;
+  --chip-text:#3e5a14;
+  --line:#33382b;
+  --font-display:"Tan Garland", "Times New Roman", serif;
+  --font-head:"Poppins", sans-serif;
+  --font-body:"Nunito", sans-serif;
+  --header-h:80px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--header-h)}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-body);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid #7aa83a;outline-offset:3px}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:2px solid var(--line);height:var(--header-h);display:flex;align-items:center}
+.brand{display:flex;align-items:center;gap:18px;padding:0 30px 0 45px;height:100%;flex:0 0 500px;border-right:2px solid var(--line)}
+.brand img{width:44px;height:auto}
+.brand span{font-family:var(--font-head);font-weight:700;font-size:26px;letter-spacing:.03em;color:var(--ink)}
+.nav{display:flex;align-items:center;flex:1;padding:0 38px 0 40px;gap:0}
+.nav-links{display:flex;align-items:center;margin:0;padding:0;list-style:none}
+.nav-links li{padding:0 38px;border-left:1px solid var(--line);height:40px;display:flex;align-items:center}
+.nav-links li:first-child{border-left:0}
+.nav-links a{font-size:18px;letter-spacing:.03em}
+.nav-links a:hover,.nav-right a:hover{text-decoration:underline;text-underline-offset:6px}
+.nav-right{display:flex;align-items:center;gap:22px;margin-left:auto}
+.mini-search{display:flex;border:2px solid var(--line);background:#fff;height:34px}
+.mini-search input{border:0;background:transparent;width:180px;padding:0 12px;font:italic 15px var(--font-body);color:var(--ink);outline-offset:-2px}
+.mini-search input::placeholder{color:#8a8d80}
+.mini-search button{border:0;border-left:2px solid var(--line);background:var(--cream);width:40px;cursor:pointer;display:grid;place-items:center}
+.nav-right svg{width:28px;height:28px;stroke:var(--ink);fill:none;stroke-width:1.5}
+.menu-toggle,.menu-btn{display:none}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:14px;background:var(--forest);color:#fff;font-family:var(--font-head);font-weight:600;text-transform:uppercase;border-radius:999px;transition:background .2s}
+.btn:hover{background:var(--forest-deep)}
+.btn svg{width:18px;height:18px;fill:#fff}
+.btn-lg{font-size:18px;padding:14px 25px;height:52px}
+.btn-sm{font-size:14px;padding:0 22px;height:46px;gap:26px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:calc(100vh - var(--header-h));min-height:718px;padding:30px 0 40px 20px}
+.hero-basket{position:absolute;top:18px;right:0;width:min(51.5%,660px);z-index:1;pointer-events:none}
+.hero-copy{position:relative;z-index:2}
+.hero h1{margin:0;font-family:var(--font-display);font-weight:400;font-size:clamp(56px,10.2vw,134px);line-height:1.05;letter-spacing:.04em;word-spacing:.12em;color:var(--ink);font-feature-settings:"dlig" 1,"liga" 1}
+.hero .tag{margin:28px 0 0 19px;font-family:var(--font-head);font-weight:600;font-size:22px;text-transform:uppercase;letter-spacing:-.2px}
+.hero .btn{margin:30px 0 0 19px}
+.week-card{position:relative;z-index:2;margin:44px 0 0 19px;width:min(591px,calc(100% - 20px));min-height:240px;background:var(--sage-card);border-radius:60px;padding:40px 41px 34px}
+.week-card h2{margin:0;font-family:var(--font-head);font-weight:600;font-size:25px;text-transform:uppercase;letter-spacing:-.3px}
+.week-card blockquote{margin:22px 0 14px 9px;font-family:var(--font-head);font-weight:400;font-size:26px;line-height:1.05;max-width:430px}
+
+/* ---------- Myth or Fact search section ---------- */
+.search-section{position:relative;min-height:718px;text-align:center;padding-top:90px;overflow:hidden}
+.search-section h2{margin:0;font-family:var(--font-display);font-weight:400;font-size:clamp(56px,9.2vw,118px);line-height:1.1;letter-spacing:.04em;word-spacing:.12em;font-feature-settings:"dlig" 1,"liga" 1}
+.search-section .sub{margin:10px 0 0;font-family:var(--font-head);font-weight:600;font-size:21px;text-transform:uppercase;letter-spacing:-.3px}
+.big-search{position:relative;z-index:3;margin:26px auto 0;width:min(615px,calc(100% - 40px));height:52px;display:flex;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:0 24px 0 20px}
+.big-search svg{flex:0 0 38px;width:38px;height:38px;stroke:#c3cad8;fill:none;stroke-width:2.5;stroke-linecap:round}
+.big-search input{flex:1;border:0;outline:0;background:transparent;padding:0 14px;font:600 22px var(--font-head);color:var(--ink)}
+.big-search input::placeholder{color:#c3cad8}
+.big-search:focus-within{box-shadow:0 0 0 3px #a9cf6a}
+.popular{position:relative;z-index:3;width:min(615px,calc(100% - 40px));margin:22px auto 0;text-align:left}
+.popular h3{margin:0 0 14px 16px;font-family:var(--font-head);font-weight:600;font-size:21px;color:var(--forest-deep)}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin:0;padding:0;list-style:none}
+.chips a{display:block;min-width:112px;text-align:center;padding:4px 20px;background:var(--chip-bg);border:1px solid var(--chip-line);border-radius:999px;font:400 17px var(--font-head);color:var(--chip-text);transition:background .2s}
+.chips a:hover{background:#dfe9bd}
+.deco{position:absolute;pointer-events:none}
+.deco.clover-tr{top:3px;right:0;width:21.9%}
+.deco.hills{left:0;bottom:0;width:100%;height:auto}
+.deco.steth{right:0;bottom:0;width:40.7%;z-index:2}
+
+/* ---------- Footer (structure only) ---------- */
+.site-footer{background:var(--forest-deep);color:var(--cream);padding:60px 45px 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;max-width:1280px;margin:0 auto}
+.footer-col h4{margin:0 0 14px;font-family:var(--font-head);font-weight:600;font-size:16px}
+.footer-col ul{list-style:none;margin:0;padding:0}
+.footer-bottom{max-width:1280px;margin:40px auto 0;padding-top:20px;border-top:1px solid rgba(255,249,235,.25);font-size:14px}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){
+  .brand{flex-basis:auto;border-right:0;padding-left:24px}
+  .nav-links li{padding:0 16px}
+  .mini-search input{width:120px}
+}
+@media (max-width:860px){
+  :root{--header-h:68px}
+  .brand span{font-size:20px}
+  .brand img{width:36px}
+  .menu-btn{display:grid;place-items:center;margin-left:auto;margin-right:20px;width:44px;height:44px;cursor:pointer;font-size:28px}
+  .nav{position:absolute;top:var(--header-h);left:0;right:0;background:var(--cream);border-bottom:2px solid var(--line);flex-direction:column;align-items:stretch;padding:0 24px;max-height:0;overflow:hidden;transition:max-height .3s}
+  .menu-toggle:checked ~ .nav{max-height:520px;padding:16px 24px 24px}
+  .nav-links{flex-direction:column;align-items:stretch}
+  .nav-links li{border-left:0;border-bottom:1px solid #d6d2bf;padding:0;height:auto}
+  .nav-links a{padding:12px 0;width:100%}
+  .nav-right{margin:16px 0 0;flex-wrap:wrap}
+  .site-header{justify-content:space-between}
+  .hero{padding-left:20px;padding-right:20px;min-height:0}
+  .hero-basket{position:relative;top:auto;right:auto;width:80%;margin:10px 0 0 auto;order:3}
+  .hero{display:flex;flex-direction:column}
+  .week-card{border-radius:40px;padding:30px 26px;margin-left:0;width:100%}
+  .hero .tag,.hero .btn{margin-left:0}
+  .search-section{padding-top:60px;min-height:640px}
+  .deco.steth{width:55%}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){
+  .footer-grid{grid-template-columns:1fr}
+  .hero .tag{font-size:17px}
+  .week-card blockquote{font-size:21px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
