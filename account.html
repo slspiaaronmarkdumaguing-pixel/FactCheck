@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aaron Mark Dumaguing | FactCheck.Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ================= HEADER (same on every page) ================= -->
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="FactCheck.Health home">
+    <img src="images/logo-apple.png" alt="">
+    <span>FACTCHECK.HEALTH</span>
+  </a>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+  <label for="menu-toggle" class="menu-btn" aria-hidden="true">&#9776;</label>
+  <nav class="nav" aria-label="Main">
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="index.html" aria-haspopup="true">Home</a>
+        <!-- Appears the instant the mouse is over "Home" (CSS only) -->
+        <div class="dropdown">
+          <ul class="dropdown-panel">
+            <li><a href="resources.html">Trusted<br>Resources</a></li>
+            <li><a href="contact.html">Contact<br>Us</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="crisis-updates.html">Crisis<br>Updates</a></li>
+            <li><a href="health-encyclopedia.html">Health<br>Encyclopedia</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="myths.html">Myths</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="submit-claim.html">Submit</a></li>
+    </ul>
+    <div class="nav-right">
+      <form class="mini-search" action="search-results.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search..." aria-label="Search">
+        <button type="submit" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#33382b" stroke-width="3.2" stroke-linecap="round"><circle cx="10" cy="10" r="6.5"/><path d="M15 15l6 6"/></svg>
+        </button>
+      </form>
+      <a href="about.html">About</a>
+      <a href="account.html#saved" aria-label="Saved"><svg viewBox="0 0 24 24"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.8a4.6 4.6 0 0 1 8 2.7c0 6.1-8 11-8 11z"/></svg></a>
+      <a href="account.html" aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="9.5" r="3.5"/><path d="M5.5 19c1.5-3 4-4 6.5-4s5 1 6.500 4"/></svg></a>
+    </div>
+  </nav>
+</header>
+
+<main class="page page--account">
+  <img class="deco clover-tr" src="images/clover-top-right.png" alt="">
+  <img class="deco clover-bl" src="images/clover-bottom-left.png" alt="">
+
+  <div class="wrap">
+    <section class="profile">
+      <!-- To use a real photo: replace the <svg> with <img src="images/avatar.png" alt="Your name"> -->
+      <div class="avatar"><svg viewBox="0 0 229 229" role="img" aria-label="Profile picture">
+        <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c3e6ff"/><stop offset=".7" stop-color="#f4fbff"/></linearGradient></defs>
+        <rect width="229" height="229" fill="url(#sky)"/>
+        <path d="M82 66a22 22 0 0 1 42-9 15 15 0 0 1 22 6 11 11 0 0 1 2 22H70a11 11 0 0 1 12-19z" fill="#fff"/>
+        <path d="M0 160c40-8 80 0 110 14s80 8 119-4V229H0z" fill="#c3df80"/>
+        <path d="M30 229c40-45 120-60 199-20V229z" fill="#8aa500"/>
+      </svg></div>
+      <h1 class="profile-name">Aaron Mark Dumaguing</h1>
+
+      <input class="sr" type="checkbox" id="follow">
+      <div class="profile-actions">
+        <label class="btn-follow" for="follow" role="button"></label>
+        <a class="btn-message" href="contact.html">Message</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span>23</span><span>articles</span></div>
+        <div class="stat"><span>45</span><span>health facts</span></div>
+        <div class="stat stat--followers"><span><span class="n1">1,245</span><span class="n2">1,246</span></span><span>followers</span></div>
+      </div>
+    </section>
+
+    <ul class="acct-tabs" aria-label="Profile sections">
+      <li><a href="#published">Published</a></li>
+      <li><a href="#saved">Saved</a></li>
+      <li><a href="#claims">My Claims</a></li>
+    </ul>
+
+    <div class="acct-panels">
+      <!-- Click a tab: its panel opens (CSS :target). Keep "published" LAST in this list. -->
+      <section class="tab-panel" id="saved">
+        <h2 class="panel-title">Saved articles</h2>
+        <ul class="row-list">
+        <li class="row-card">
+          <img src="images/sugar-bowl.png" alt="Bowl of sugar">
+          <div><h3><a href="fact-check-article.html">Sugar causes an immediate diabetes</a></h3><p class="pub-meta">Saved Nov 12, 2026</p></div>
+          <span class="badge badge--myth">Myth</span>
+        </li>
+        <li class="row-card">
+          <img src="images/fruit-bowl.png" alt="Bowl of fruit">
+          <div><h3><a href="fact-check-article.html">Moderation is key for a balanced diet</a></h3><p class="pub-meta">Saved Nov 11, 2026</p></div>
+          <span class="badge badge--fact">Fact</span>
+        </li>
+        </ul>
+      </section>
+
+      <section class="tab-panel" id="claims">
+        <h2 class="panel-title">Claims you submitted</h2>
+        <ul class="row-list">
+        <li class="row-card claim-row">
+          <div><h3>Does lemon water detox the body?</h3><p class="pub-meta">Submitted Nov 20, 2026</p></div>
+          <span class="status status--review">Under review</span>
+        </li>
+        <li class="row-card claim-row">
+          <div><h3>Eating carrots improves eyesight</h3><p class="pub-meta">Submitted Nov 14, 2026</p></div>
+          <span class="status status--fact">Verified: Fact</span>
+        </li>
+        <li class="row-card claim-row">
+          <div><h3>Cracking your knuckles causes arthritis</h3><p class="pub-meta">Submitted Nov 2, 2026</p></div>
+          <span class="status status--myth">Verified: Myth</span>
+        </li>
+        </ul>
+        <div class="more-wrap"><a class="btn-lime" href="submit-claim.html">Submit a new claim</a></div>
+      </section>
+
+      <section class="tab-panel" id="published">
+        <h2 class="panel-title">Published articles</h2>
+        <ul class="pub-grid">
+        <li class="pub-card">
+          <img src="images/article-greentea-wide.png" alt="Cup of green tea">
+          <div class="pub-body">
+            <span class="badge badge--myth">Mostly False</span>
+            <h3><a href="article-details.html">Does green tea burn fat?</a></h3>
+            <p class="pub-meta">Nov 10, 2026 · 5 min read</p>
+            <div class="pub-foot"><a href="article-details.html">Read more...</a>
+              <label class="like" aria-label="Like this article"><input class="sr" type="checkbox"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.8a4.6 4.6 0 0 1 8 2.7c0 6.1-8 11-8 11z"/></svg></label></div>
+          </div>
+        </li>
+        <li class="pub-card">
+          <img src="images/article-vaccine.png" alt="Vaccine vial">
+          <div class="pub-body">
+            <span class="badge badge--myth">Myth</span>
+            <h3><a href="article-details.html">Are COVID-19 vaccines unsafe?</a></h3>
+            <p class="pub-meta">Nov 8, 2026 · 6 min read</p>
+            <div class="pub-foot"><a href="article-details.html">Read more...</a>
+              <label class="like" aria-label="Like this article"><input class="sr" type="checkbox"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.8a4.6 4.6 0 0 1 8 2.7c0 6.1-8 11-8 11z"/></svg></label></div>
+          </div>
+        </li>
+        <li class="pub-card">
+          <img src="images/article-coffee.png" alt="Cups of coffee">
+          <div class="pub-body">
+            <span class="badge badge--fact">Fact</span>
+            <h3><a href="article-details.html">Is coffee bad for your heart?</a></h3>
+            <p class="pub-meta">Nov 6, 2026 · 4 min read</p>
+            <div class="pub-foot"><a href="article-details.html">Read more...</a>
+              <label class="like" aria-label="Like this article"><input class="sr" type="checkbox"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 12 6.8a4.6 4.6 0 0 1 8 2.7c0 6.1-8 11-8 11z"/></svg></label></div>
+          </div>
+        </li>
+        </ul>
+        <div class="more-wrap"><a class="btn-lime" href="articles.html">View all articles</a></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <nav class="footer-nav" aria-label="Footer">
+    <a href="https://slspiaaronmarkdumaguing-pixel.github.io/Ecommerce-website/#home" target="_blank" rel="noopener">About Us</a>
+    <span aria-hidden="true">|</span>
+    <a href="https://slspiaaronmarkdumaguing-pixel.github.io/Ecommerce-website/#contact" target="_blank" rel="noopener">Contact</a>
+    <span aria-hidden="true">|</span>
+    <a href="https://slspiaaronmarkdumaguing-pixel.github.io/Ecommerce-website/#terms-info" target="_blank" rel="noopener">Sources</a>
+    <span aria-hidden="true">|</span>
+    <a href="articles.html">Articles</a>
+  </nav>
+  <p class="copyright">© 2026 Factcheck.health , Dumaguing Aaron Mark. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
